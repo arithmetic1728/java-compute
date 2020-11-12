@@ -27,21 +27,9 @@ import java.io.InputStream;
 import org.junit.Test;
 
 public class sampleTest {
-  static class MyCreds implements CredentialsProvider {
-
-    @Override
-    public Credentials getCredentials() throws IOException {
-      File file = new File("/usr/local/google/home/sijunliu/wks/creds/shin_user_cred.json");
-      InputStream stream = new FileInputStream(file);
-      UserCredentials creds = UserCredentials.fromStream(stream);
-      return creds;
-    }
-  }
-
   @Test
   public void myTest() throws IOException {
-    MyCreds provider = new MyCreds();
-    InstancesSettings clientSettings = InstancesSettings.newBuilder().setCredentialsProvider(provider).build();
+    InstancesSettings clientSettings = InstancesSettings.newBuilder().build();
     InstancesClient client = InstancesClient.create(clientSettings);
     String project = "shinfan-mtls-demo";
     String zone = "us-west1-a";
