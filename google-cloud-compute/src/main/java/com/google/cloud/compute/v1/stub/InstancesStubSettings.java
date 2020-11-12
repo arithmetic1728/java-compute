@@ -458,6 +458,11 @@ public class InstancesStubSettings extends StubSettings<InstancesStubSettings> {
     return "compute.googleapis.com";
   }
 
+  /** Returns the default mTLS service endpoint. */
+  public static String getDefaultMtlsEndpoint() {
+    return "compute.mtls.googleapis.com";
+  }
+
   /** Returns the default service port. */
   public static int getDefaultServicePort() {
     return 443;
@@ -991,6 +996,7 @@ public class InstancesStubSettings extends StubSettings<InstancesStubSettings> {
       builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
       builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
       builder.setEndpoint(getDefaultEndpoint());
+      builder.setMtlsEndpoint(getDefaultMtlsEndpoint());
       builder.setAllowMtlsEndpointOverride(true);
       return initDefaults(builder);
     }
