@@ -991,6 +991,7 @@ public class InstancesStubSettings extends StubSettings<InstancesStubSettings> {
       builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
       builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
       builder.setEndpoint(getDefaultEndpoint());
+      builder.setAllowMtlsEndpointOverride(true);
       return initDefaults(builder);
     }
 
