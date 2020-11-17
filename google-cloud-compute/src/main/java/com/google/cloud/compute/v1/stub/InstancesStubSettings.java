@@ -995,9 +995,8 @@ public class InstancesStubSettings extends StubSettings<InstancesStubSettings> {
       builder.setTransportChannelProvider(defaultTransportChannelProvider());
       builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
       builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
-      builder.setEndpoint(getDefaultEndpoint());
+      builder.setOverrideableEndpoint(getDefaultEndpoint());
       builder.setMtlsEndpoint(getDefaultMtlsEndpoint());
-      builder.setAllowMtlsEndpointOverride(true);
       return initDefaults(builder);
     }
 
