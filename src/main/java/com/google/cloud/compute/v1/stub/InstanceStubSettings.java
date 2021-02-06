@@ -1049,6 +1049,7 @@ public class InstanceStubSettings extends StubSettings<InstanceStubSettings> {
       builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
       builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
       builder.setEndpoint(getDefaultEndpoint());
+      builder.setDefaultEndpoint(getDefaultEndpoint());
       return initDefaults(builder);
     }
 
