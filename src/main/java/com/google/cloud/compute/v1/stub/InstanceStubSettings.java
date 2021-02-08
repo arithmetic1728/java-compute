@@ -492,7 +492,7 @@ public class InstanceStubSettings extends StubSettings<InstanceStubSettings> {
 
   /** Returns a builder for the default credentials for this service. */
   public static GoogleCredentialsProvider.Builder defaultCredentialsProviderBuilder() {
-    return GoogleCredentialsProvider.newBuilder().setScopesToApply(DEFAULT_SERVICE_SCOPES);
+    return GoogleCredentialsProvider.newBuilder().setDefaultScopes(DEFAULT_SERVICE_SCOPES).setScopesToApply(ImmutableList.<String>of());
   }
 
   /** Returns a builder for the default ChannelProvider for this service. */
@@ -1049,7 +1049,7 @@ public class InstanceStubSettings extends StubSettings<InstanceStubSettings> {
       builder.setCredentialsProvider(defaultCredentialsProviderBuilder().build());
       builder.setInternalHeaderProvider(defaultApiClientHeaderProviderBuilder().build());
       builder.setEndpoint(getDefaultEndpoint());
-      builder.setDefaultEndpoint(getDefaultEndpoint());
+      builder.setDefaultApiEndpoint(getDefaultEndpoint());
       return initDefaults(builder);
     }
 
