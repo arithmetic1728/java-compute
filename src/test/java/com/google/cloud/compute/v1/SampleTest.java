@@ -30,7 +30,9 @@ import org.junit.Test;
 
 public class SampleTest {
   public InstanceSettings createADCSettings() throws IOException {
-    return InstanceSettings.newBuilder().build();
+    // return InstanceSettings.newBuilder().build();
+    // return InstanceSettings.newBuilder().setEndpoint("https://compute.mtls.googleapis.com/compute/v1/projects/").build();
+    return InstanceSettings.newBuilder().setEndpoint("https://staging-compute-ccfe.sandbox.googleapis.com/compute/v1/projects/").build();
   }
 
   public InstanceSettings createCustomScopeSettings() throws IOException {
@@ -51,8 +53,8 @@ public class SampleTest {
 
   @Test
   public void myTest() throws IOException {
-    // InstanceSettings clientSettings = createADCSettings();
-    InstanceSettings clientSettings = createCustomScopeSettings();
+    InstanceSettings clientSettings = createADCSettings();
+    //InstanceSettings clientSettings = createCustomScopeSettings();
 
     InstanceClient client = InstanceClient.create(clientSettings);
     String project = "dcatest-281318";
