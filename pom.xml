@@ -109,7 +109,7 @@
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax</artifactId>
-      <version>1.63.3-SNAPSHOT</version>
+      <version>1.64.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.google.code.gson</groupId>
@@ -130,7 +130,7 @@
     <dependency>
       <groupId>com.google.api</groupId>
       <artifactId>gax-httpjson</artifactId>
-      <version>0.80.3-SNAPSHOT</version>
+      <version>0.81.1-SNAPSHOT</version>
     </dependency>
     <dependency>
       <groupId>com.google.auth</groupId>
